@@ -60,7 +60,6 @@ MAS4RTL/
 │   ├── run_coevo.py                    # Main entry point (all designs)
 │   ├── run_single_design.py            # Single design entry point
 │   ├── benchmark_models.py             # Baseline: N independent LLM generations
-│   ├── rerun_failed.py                 # Rerun failed designs from existing experiment
 │   ├── evaluate_experiment.py          # Re-evaluate completed experiments
 │   │
 │   ├── config/
@@ -203,17 +202,6 @@ python -m coevo.benchmark_models --config coevo/config/default.yaml \
     --dataset verilogeval --runs 10 --model gpt-4o-mini
 ```
 
-### Rerun Failed Designs
-
-```bash
-# Rerun all failed designs in an existing experiment
-python -m coevo.rerun_failed --experiment <experiment_name>
-
-# Rerun specific designs with config overrides
-python -m coevo.rerun_failed --experiment <experiment_name> \
-    --only Prob068_countbcd,Prob141_count_clock \
-    --override evolution.max_generations=20
-```
 
 ### Re-evaluate Experiment
 
