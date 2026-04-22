@@ -55,7 +55,7 @@ COEVO evolves a population of hardware designs through LLM-driven mutation opera
 ## Repository Structure
 
 ```
-MAS4RTL/
+COEVO/
 ├── coevo/                              # Framework source code
 │   ├── run_coevo.py                    # Main entry point (all designs)
 │   ├── run_single_design.py            # Single design entry point
